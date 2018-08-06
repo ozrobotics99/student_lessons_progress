@@ -7,7 +7,7 @@
     <tr>
       <th>Number</th>
       <th>Part number</th>
-      <th>Current lesson</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= lesson.number %></td>
         <td><%= lesson.part_number %></td>
-        <td><%= lesson.current_lesson %></td>
+
         <td><%= link_to 'Show', lesson %></td>
         <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
         <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>

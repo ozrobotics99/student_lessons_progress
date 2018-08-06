@@ -10,8 +10,6 @@
   <%= @student.progress.lesson.name %>
 </p>
 
+<p><%= link_to 'Update Progress', "/update_student_progress/#{@student.id}" %></p>
 
-
-
-
-<%= link_to 'Teachers report', teachers_path %>
+<p><%= link_to 'Teachers report', teachers_path %> </p>

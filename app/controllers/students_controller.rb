@@ -32,7 +32,6 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(student_params)
-
     respond_to do |format|
       if @student.save
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
@@ -57,9 +56,6 @@ class StudentsController < ApplicationController
       end
     end
   end
-
-
-
 
   # DELETE /students/1
   # DELETE /students/1.json

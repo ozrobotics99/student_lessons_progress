@@ -1,36 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Installation:
 
-Things you may want to cover:
+    Ruby version:
+        ruby '2.4.4'
 
-* Ruby version
+    Install gems:
+        bundle install
 
-* System dependencies
+    Database creation:
+        rake db:create
+        rake db:migrate
+        rake db:seed
 
-* Configuration
 
-* Database creation
-
-* Database initialization
+    Run application:
+        rails s
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-rake db:rollback
-rails destroy scaffold course
 
 
-#rake db:drop:_unsafe
-#rake db:create
-#rake db:migrate
-#rake db:seed
+
+Usefull links (ids may differ) :
+
+
+    List of teachers and classes
+        http://localhost:3000/teachers
+
+    Specific teachers report:
+        http://localhost:3000/students_class/18
+
+    each student:
+        http://localhost:3000/students/25
+
+    json student:
+        http://localhost:3000/students/25.json
+
+
+
+
+
+
+
 
 
 
@@ -50,14 +62,6 @@ rails generate scaffold progress lesson:references student:references
 
 
 
-
-
-
-
-
-http://localhost:3000/teachers
-
-to show students per teacher
 
 
 
