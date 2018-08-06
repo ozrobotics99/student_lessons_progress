@@ -18,7 +18,7 @@
         <td><%= teacher.first_name %></td>
         <td><%= teacher.last_name %></td>
 
-        <td><%= link_to 'Show Students', teacher %></td>
+        <td><%= link_to 'Show Class', "students_class/#{teacher.id}" %></td>
 
       </tr>
     <% end %>

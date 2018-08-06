@@ -1,6 +1,6 @@
 class Lesson < ApplicationRecord
-  validates :number, presence: true
-  validates :part_number, presence: true
+  validates :number, length: { maximum: 3 }, presence: true
+  validates :part_number, length: { maximum: 1 }, presence: true
 
   has_many :progresses
 

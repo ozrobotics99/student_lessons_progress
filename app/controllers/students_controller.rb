@@ -7,6 +7,13 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
+  def students_class
+    teacher_id = params[:id]
+    @teacher = Teacher.find_by_id(teacher_id)
+    @students = @teacher.students
+
+  end
+
   # GET /students/1
   # GET /students/1.json
   def show

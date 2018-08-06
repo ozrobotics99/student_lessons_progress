@@ -15,8 +15,8 @@
   <tbody>
     <% @enrolments.each do |enrolment| %>
       <tr>
-        <td><%= enrolment.teacher.name %></td>
-        <td><%= enrolment.student.name %> </td>
+        <td><%= enrolment.teacher.fullname %></td>
+        <td><%= enrolment.student.fullname %> </td>
 
         <td><%= link_to 'Show', enrolment %></td>
 

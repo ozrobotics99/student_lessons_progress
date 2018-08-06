@@ -15,7 +15,7 @@
   <tbody>
     <% @progresses.each do |progress| %>
       <tr>
-        <td><%= progress.student.name %></td>
+        <td><%= progress.student.fullname %></td>
         <td><%= progress.lesson.name %></td>
 
         <td><%= link_to 'Show', progress %></td>

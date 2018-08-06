@@ -55,6 +55,11 @@ rails generate scaffold progress lesson:references student:references
 
 
 
+http://localhost:3000/teachers
+
+to show students per teacher
+
+
 
 
 
