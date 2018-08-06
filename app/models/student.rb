@@ -4,6 +4,7 @@ class Student < ApplicationRecord
   validates :last_name, length: { maximum: 100 }, presence: true
 
   has_many :enrolments
+
   has_one :progress
 
   def fullname

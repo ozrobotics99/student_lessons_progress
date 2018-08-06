@@ -11,15 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :lesson_id %>
-    <%= form.text_field :lesson_id %>
-  </div>
 
-  <div class="field">
-    <%= form.label :student_id %>
-    <%= form.text_field :student_id %>
-  </div>
+
+    <%= form.hidden_field :student_id, value: progress.student.id %>
 
   <div class="actions">
     <%= form.submit %>

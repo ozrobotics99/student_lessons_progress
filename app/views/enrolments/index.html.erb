@@ -12,14 +12,17 @@
   </thead>
 
   <tbody>
-    <% @enrolments.each do |enrolment| %>
-      <tr>
-        <td><%= enrolment.student.name %> </td>
-        <td><%= enrolment.teacher.name %></td>
-        <td><%= link_to 'Show', enrolment %></td>
-        <td><%= link_to 'Edit', edit_enrolment_path(enrolment) %></td>
-        <td><%= link_to 'Destroy', enrolment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <%  unless @enrolments.empty?  %>
+
+        <%   @enrolments.each do |enrolment| %>
+          <tr>
+            <td><%= enrolment.student.name %> </td>
+            <td><%= enrolment.teacher.name %></td>
+            <td><%= link_to 'Show', enrolment %></td>
+            <td><%= link_to 'Edit', edit_enrolment_path(enrolment) %></td>
+            <td><%= link_to 'Destroy', enrolment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
     <% end %>
   </tbody>
 </table>

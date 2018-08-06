@@ -1,6 +1,10 @@
-<h1>Editing Progress</h1>
+<h1>Update Progress for <%= @progress.student.fullname  %></h1>
+
+<br>
+<div>Current progress is: <b> <%= progress_text(@progress.student) %> </b></div>
+
+<br>
 
 <%= render 'form', progress: @progress %>
 
-<%= link_to 'Show', @progress %> |
-<%= link_to 'Back', progresses_path %>
+
