@@ -29,6 +29,7 @@ Enrolment.create!(:student => s3, :teacher => t1 )
 Enrolment.create!(:student => s4, :teacher => t1 )
 puts 'Enrolments Created.'
 
+#change to allow extra lessons true or false
 EXTRA_LESSONS = true
 MAX_LESSONS = 100
 FIRST_50 = 50
