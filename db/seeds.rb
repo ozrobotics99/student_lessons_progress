@@ -13,8 +13,6 @@ Lesson.delete_all
 Student.delete_all
 Teacher.delete_all
 
-
-
 t1 = Teacher.create!(:first_name => 'Bob', :last_name => 'Hake')
 t2 = Teacher.create!(:first_name => 'Andrew', :last_name => 'Bogut')
 puts 'Teachers Created.'
@@ -31,27 +29,48 @@ Enrolment.create!(:student => s3, :teacher => t1 )
 Enrolment.create!(:student => s4, :teacher => t1 )
 puts 'Enrolments Created.'
 
+EXTRA_LESSONS = true
 MAX_LESSONS = 100
+FIRST_50 = 50
+FIRST_50_PARTS = 5
 MAX_PARTS = 3
-lesson = 1
-part = 1
 
-puts 'Creating Lessons...'
+def create_lessons
 
-while lesson <= MAX_LESSONS  do
-
+  lesson = 1
   part = 1
-  while part <= MAX_PARTS do
-    Lesson.create!(:number => lesson, :part_number => part)
-    #puts "Created lesson #{lesson}, part #{part} "
 
-    part += 1
+  if EXTRA_LESSONS == true
+    puts 'Creating Extra Lessons...'
+    max_l = FIRST_50
+    max_p = FIRST_50_PARTS
+    loop_create_lessons(lesson, max_l, part, max_p)
+
+    lesson = 51
+    max_l = MAX_LESSONS
+    max_p = MAX_PARTS
+    loop_create_lessons(lesson, max_l, part, max_p)
+  else
+    puts 'Creating Normal Lessons...'
+    max_l = MAX_LESSONS
+    max_p = MAX_PARTS
+    loop_create_lessons(lesson, max_l, part, max_p)
   end
-
-  lesson += 1
+  puts 'Lessons Created.'
 end
 
-puts 'Lessons Created.'
+def loop_create_lessons(lesson, max_l, part, max_p)
+  while lesson <= max_l  do
+    part = 1
+    while part <= max_p do
+      Lesson.create!(:number => lesson, :part_number => part)
+      #puts "Created lesson #{lesson}, part #{part} "
+      part += 1
+    end
+    lesson += 1
+  end
+end
 
+create_lessons()
 
 

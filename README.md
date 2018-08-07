@@ -17,12 +17,26 @@ Installation:
     Run application:
         rails s
 
-* How to run the test suite
+    How to run the tests:
+        #rake db:migrate RAILS_ENV=test
+
+        #all tests
+        bundle exec rspec spec
+
+        #individual tests
+        bundle exec rspec spec/controllers/students_controller_spec.rb
+        bundle exec rspec spec/controllers/teachers_controller_spec.rb
+        bundle exec rspec spec/controllers/lessons_controller_spec.rb
+        bundle exec rspec spec/controllers/progresses_controller_spec.rb
+        bundle exec rspec spec/controllers/enrolments_controller_spec.rb
+
+        bundle exec rspec spec/models/student_model_spec.rb
+        bundle exec rspec spec/models/teacher_model_spec.rb
 
 
 
 
-Usefull links (ids may differ) :
+Useful links (ids may differ):
 
 
     List of teachers and classes
@@ -65,7 +79,8 @@ rails generate scaffold progress lesson:references student:references
 
 
 
-
+Problems:
+factory_girl gem is deprecated warning, I couldn't get it to work.
 
 
 
