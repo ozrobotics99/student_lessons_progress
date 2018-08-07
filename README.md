@@ -16,7 +16,7 @@
 
 
 ###How to run the tests###
-        #rake db:migrate RAILS_ENV=test
+        rake db:migrate RAILS_ENV=test
 
         #all tests
         bundle exec rspec spec
@@ -53,40 +53,40 @@
 
 
 Problems:
-factory_girl gem is deprecated warning, I couldn't get it to work.
+    factory_girl gem is deprecated warning, I couldn't get it to work.
 
 
 TO DO:
-more spec tests progress, enrolments
-set up data with factory girl
+    more spec tests progress, enrolments
+    set up data with factory girl
 
-change the template to reflect nicer graphic design
+    change the template to reflect nicer graphic design
 
-fix rubocop errors
+    fix rubocop errors
 
 
 
 
 ###scaffolds###
 
-rails generate scaffold teacher first_name:string last_name:string email:string
+    rails generate scaffold teacher first_name:string last_name:string email:string
 
-rails generate scaffold student first_name:string last_name:string email:string
+    rails generate scaffold student first_name:string last_name:string email:string
 
-rails generate scaffold enrolment student:references teacher:references
+    rails generate scaffold enrolment student:references teacher:references
 
 
-rails generate scaffold lesson number:integer part_number:integer current_lesson:integer
+    rails generate scaffold lesson number:integer part_number:integer current_lesson:integer
 
-rails generate scaffold progress lesson:references student:references
+    rails generate scaffold progress lesson:references student:references
 
 
 
 USEFULL commands:
 
-rake db:drop:_unsafe
+    rake db:drop:_unsafe
 
-gem uninstall -aIx
+    gem uninstall -aIx
 
 
 
