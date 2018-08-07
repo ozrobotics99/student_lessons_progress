@@ -34,8 +34,6 @@ describe "GET show" do
   end
 end
 
-
-
 describe "GET update" do
   it "should render lesson update template" do
     lesson3 = Lesson.create!(:number => 1, :part_number => 1)

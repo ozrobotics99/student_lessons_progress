@@ -7,6 +7,7 @@ class Student < ApplicationRecord
 
   has_one :progress
 
+  #format to fullname
   def fullname
     return first_name + ' ' + last_name
   end

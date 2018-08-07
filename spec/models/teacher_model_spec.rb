@@ -19,7 +19,6 @@ RSpec.describe Teacher, :type => :model do
     end
   end
 
-=begin
   #check associations
   context "check teacher" do
     it "has many enrolments" do
@@ -28,7 +27,12 @@ RSpec.describe Teacher, :type => :model do
     end
   end
 
-=end
+  context "check teacher" do
+    it "has many students through enrolments" do
+      relate = described_class.reflect_on_association(:students)
+      expect(relate.macro).to eq :has_many
+    end
+  end
 
 end
 

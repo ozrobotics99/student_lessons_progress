@@ -12,6 +12,8 @@ class ProgressesController < ApplicationController
   def show
   end
 
+  #update student progress, check if progress exists, if no progress create new
+  #otherwise update existing progress
   def update_student_progress
     @student = Student.find(params[:id])
     if !@student.progress.nil?
@@ -43,8 +45,7 @@ class ProgressesController < ApplicationController
   def edit
   end
 
-  # POST /progresses
-  # POST /progresses.json
+  # create new progress, we always start from first lesson 1,1
   def create
     @student = Student.find(params[:progress][:student_id])
     @progress = Progress.new
@@ -61,8 +62,7 @@ class ProgressesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /progresses/1
-  # PATCH/PUT /progresses/1.json
+  # update existing progress, get next lesson
   def update
     @current_lesson = @progress.lesson
     next_lesson = @current_lesson.next(@current_lesson)

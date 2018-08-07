@@ -1,6 +1,6 @@
 # README
 
-Installation:
+###Installation###
 
     Ruby version:
         ruby '2.4.4'
@@ -9,15 +9,13 @@ Installation:
         bundle install
 
     Database creation:
-        rake db:create
-        rake db:migrate
-        rake db:seed
-
+        rake db:create && rake db:migrate && rake db:seed
 
     Run application:
         rails s
 
-    How to run the tests:
+
+###How to run the tests###
         #rake db:migrate RAILS_ENV=test
 
         #all tests
@@ -32,11 +30,10 @@ Installation:
 
         bundle exec rspec spec/models/student_model_spec.rb
         bundle exec rspec spec/models/teacher_model_spec.rb
+        bundle exec rspec spec/models/lesson_model_spec.rb
 
 
-
-
-Useful links (ids may differ):
+###Useful links (ids may differ)###
 
 
     List of teachers and classes
@@ -55,13 +52,22 @@ Useful links (ids may differ):
 
 
 
+Problems:
+factory_girl gem is deprecated warning, I couldn't get it to work.
+
+
+TO DO:
+more spec tests progress, enrolments
+set up data with factory girl
+
+change the template to reflect nicer graphic design
+
+fix rubocop errors
 
 
 
 
-
-
-
+###scaffolds###
 
 rails generate scaffold teacher first_name:string last_name:string email:string
 
@@ -76,12 +82,11 @@ rails generate scaffold progress lesson:references student:references
 
 
 
+USEFULL commands:
 
+rake db:drop:_unsafe
 
-
-Problems:
-factory_girl gem is deprecated warning, I couldn't get it to work.
-
+gem uninstall -aIx
 
 
 

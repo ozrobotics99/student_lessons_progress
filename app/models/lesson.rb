@@ -4,6 +4,7 @@ class Lesson < ApplicationRecord
 
   has_many :progresses
 
+  #format lesson text
   def name
     return "Lesson #{number}, part #{part_number}"
   end
