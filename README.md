@@ -16,6 +16,7 @@
 
 
 ###How to run the tests###
+
         rake db:migrate RAILS_ENV=test
 
         #all tests
@@ -35,7 +36,6 @@
 
 ###Useful links (ids may differ)###
 
-
     List of teachers and classes
         http://localhost:3000/teachers
 
@@ -49,14 +49,13 @@
         http://localhost:3000/students/25.json
 
 
-
-
-
 Problems:
+
     factory_girl gem is deprecated warning, I couldn't get it to work.
 
 
 TO DO:
+
     more spec tests progress, enrolments
     set up data with factory girl
 
